@@ -5,15 +5,17 @@ import React from "react";
 
 const Blogitem = ({ image, title, description, category }) => {
   return (
-    <div className="m-auto">
+    <div className="m-auto group">
       <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-        <Image
-          className="rounded-t-lg"
-          width={500}
-          height={400}
-          alt="image"
-          src={image}
-        />
+        <div className="relative aspect-[12/8] overflow-hidden">
+          {" "}
+          <Image
+            className="rounded-t-lg object-cover w-full h-full group-hover:scale-105 duration-500 "
+            fill
+            alt="image"
+            src={image}
+          />
+        </div>
         <div className="p-5">
           <Link href="#" className="">
             <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 hover:text-blue-800 duration-500">
