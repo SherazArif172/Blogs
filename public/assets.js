@@ -3,7 +3,7 @@ import blog_pic_2 from "./blog_pic_2.png";
 import blog_pic_3 from "./blog_pic_3.png";
 import blog_pic_4 from "./blog_pic_4.png";
 import blog_pic_5 from "./blog_pic_5.png";
-// import blog_pic_6 from './blog_pic_6.png';
+// import blog_pic_6 from "./blog_pic_6.png";
 import blog_pic_7 from "./blog_pic_7.png";
 import blog_pic_8 from "./blog_pic_8.png";
 import blog_pic_9 from "./blog_pic_9.png";
@@ -13,7 +13,7 @@ import blog_pic_12 from "./blog_pic_12.png";
 import blog_pic_13 from "./blog_pic_13.png";
 import blog_pic_14 from "./blog_pic_14.png";
 import blog_pic_15 from "./blog_pic_15.png";
-// import blog_pic_16 from './blog_pic_16.png';
+// import blog_pic_16 from "./blog_pic_16.png";
 import facebook_icon from "./facebook_icon.png";
 import googleplus_icon from "./googleplus_icon.png";
 import twitter_icon from "./twitter_icon.png";
@@ -101,7 +101,7 @@ export const blog_data = [
     title: "Maximizing returns by minimizing resources in your startup",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the..",
-    // image: blog_pic_6,
+    image: blog_pic_5,
     date: Date.now(),
     category: "Startup",
     author: "Alex Bennett",
@@ -211,7 +211,7 @@ export const blog_data = [
     title: "Shaping the Future of statup ecosystem in the world",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the..",
-    // image: blog_pic_16,
+    image: blog_pic_15,
     date: Date.now(),
     category: "Startup",
     author: "Alex Bennett",
