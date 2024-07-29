@@ -10,7 +10,7 @@ const Bloglist = () => {
   const [menue, setMenue] = useState("All");
   return (
     <div>
-      <div className="flex gap-4 justify-center items-center">
+      <div className="flex flex-wrap gap-4 justify-center items-center">
         <Button
           onClick={() => {
             setMenue("All");
@@ -60,7 +60,7 @@ const Bloglist = () => {
           Startup
         </Button>
       </div>
-      <div className="mt-16 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center items-center m-auto">
+      <div className="mt-16 grid gap-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-center m-auto px-4">
         {blog_data
           .filter((item) => (menue === "All" ? true : item.category === menue))
           .map((item, index) => (
