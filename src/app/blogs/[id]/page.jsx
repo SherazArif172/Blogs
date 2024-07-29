@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { blog_data } from "../../../../public/assets";
+import { assets, blog_data } from "../../../../public/assets";
 import Image from "next/image";
 
 const page = ({ params }) => {
@@ -41,9 +41,87 @@ const page = ({ params }) => {
             className="w-full h-full object-cover hover:scale-110 duration-500 "
           />
         </div>
-        <div className="max-w-[770px] m-auto">
+        <div className="max-w-[770px] m-auto mt-8">
           <p className="text-2xl font-bold">Introduction</p>
-          <p>{data.description}</p>
+          <p className="text-lg mt-5">{data.description}</p>
+          <h3 className="text-2xl font-bold my-3">
+            Step 1: Enhancing your skills and capturing memorable moments
+          </h3>
+          <p className="my-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem.
+          </p>
+          <p className="my-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem.
+          </p>
+          <h3 className="text-2xl font-bold my-3">
+            Step 1: Enhancing your skills and capturing memorable moments
+          </h3>
+          <p className="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem.
+          </p>
+          <p className="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem.
+          </p>
+          <h3 className="text-2xl font-bold my-3">
+            Step 1: Enhancing your skills and capturing memorable moments
+          </h3>
+          <p className="my-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem.
+          </p>
+          <p className="my-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem.
+          </p>
+          <h3 className="text-2xl font-bold my-3">Conclusion</h3>
+          <p className="my-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos iste
+            architecto repellat eveniet facilis exercitationem eum, sunt
+            deserunt dolorem dolores quibusdam voluptates placeat numquam, sit
+            praesentium odio, aliquam autem. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Dolor, doloremque!
+          </p>
+          <div className="mt-20 w-full">
+            <p className="text-lg font-semibold ">
+              Share this article on your social media.
+            </p>{" "}
+            <div className="flex gap-3 mt-4">
+              <Image
+                src={assets.facebook_icon}
+                width={40}
+                height={40}
+                alt="image"
+              />
+              <Image
+                src={assets.twitter_icon}
+                width={40}
+                height={40}
+                alt="image"
+              />
+              <Image
+                src={assets.googleplus_icon}
+                width={40}
+                height={40}
+                alt="image"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
