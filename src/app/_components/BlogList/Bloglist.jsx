@@ -66,6 +66,7 @@ const Bloglist = () => {
           .map((item, index) => (
             <Blogitem
               key={index}
+              id={item.id}
               image={item.image}
               title={item.title}
               description={item.description}

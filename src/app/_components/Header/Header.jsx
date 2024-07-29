@@ -10,15 +10,6 @@ import { Input } from "@/components/ui/input";
 const Header = () => {
   return (
     <div className="lg:px-28 md:px-12 px-6 py-6">
-      <div className="flex justify-between items-center">
-        <Image
-          src={assets.logo}
-          width={180}
-          alt="image"
-          className=" sm:w-[130px] w-auto"
-        />
-        <Button>Get Started </Button>
-      </div>
       <div className="text-center mt-20">
         <h1 className="md:text-4xl text-2xl font-bold ">Latest Blogs</h1>
         <p className="max-w-xl m-auto mt-3">
