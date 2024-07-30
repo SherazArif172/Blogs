@@ -1,33 +1,32 @@
-import { Type } from "lucide";
 import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
   title: {
-    Type: String,
+    type: String,
     required: true,
   },
   description: {
-    Type: String,
+    type: String,
     required: true,
   },
   category: {
-    Type: String,
+    type: String,
     required: true,
   },
   author: {
-    Type: String,
+    type: String,
     required: true,
   },
   image: {
-    Type: String,
+    type: String,
     required: true,
   },
-  aurthorImg: {
-    Type: String,
+  authorImg: {
+    type: String,
     required: true,
   },
   date: {
-    Type: date,
+    type: Date,
     default: Date.now(),
   },
 });
