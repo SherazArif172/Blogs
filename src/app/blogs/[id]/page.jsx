@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { assets, blog_data } from "../../../../public/assets";
 import Image from "next/image";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const [data, setData] = useState(null);
 
   const FetchBlogData = () => {
@@ -130,4 +130,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
