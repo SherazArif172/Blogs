@@ -1,13 +1,13 @@
 import { connectDb } from "@/lib/config/db";
 import BlogModel from "@/lib/models/blogModel";
-import { SourceCode } from "eslint";
+// import { SourceCode } from "eslint";
 
 const { NextResponse } = require("next/server");
 import { writeFile } from "fs/promises";
 
 const LoadData = async () => {
-  connectDb();
-  console.log("connected");
+  await connectDb();
+  // console.log("connected");
 };
 
 LoadData();
