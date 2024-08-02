@@ -15,11 +15,11 @@ LoadData();
 //get request
 
 export async function GET(res) {
-  return NextResponse.json({ msg: "api is working" });
+  const blogs = await BlogModel.find({});
+  return NextResponse.json({ blogs });
 }
 
 // post request
-
 export async function POST(req) {
   const formData = await req.formData();
   const timestamp = Date.now();

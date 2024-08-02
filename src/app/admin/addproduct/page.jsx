@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { assets } from "../../../../public/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Page = () => {
   const [image, setImage] = useState(false);
@@ -34,7 +36,7 @@ const Page = () => {
     formData.append("image", image);
     const response = await axios.post("/api/blog", formData);
     if (response.data.success) {
-      // toast.success("added");
+      toast.success("added");
       setImage(false);
       setData({
         title: "",
@@ -43,11 +45,16 @@ const Page = () => {
         author: "Ishfaq Ahmad",
         authorImg: "/public/profile_icon.png",
       });
+    } else {
+      toast.error("Error");
     }
   };
   return (
     <>
       <form action="" className="py-5 px-5 sm:pt-12 sm:pl-16">
+        <div>
+          <ToastContainer theme="dark" />
+        </div>
         <p className="text-xl">Upload thumbnail</p>
         <label htmlFor="image" className="">
           <Image
@@ -99,7 +106,7 @@ const Page = () => {
           <option value="Startup">Startup</option>
           <option value="Technology">Technology</option>
           <option value="Lifestyle">Lifestyle</option>
-        </select>{" "}
+        </select>
         <br />
         <button
           type="submit"
