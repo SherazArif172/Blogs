@@ -25,18 +25,20 @@ const Page = () => {
     console.log(data);
   };
 
-  const onSubmit = async (e) => {
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("title", data.title);
     formData.append("description", data.description);
     formData.append("category", data.category);
     formData.append("author", data.author);
-    formData.append("authotImg", data.authorImg);
+    formData.append("authortImg", data.authorImg);
     formData.append("image", image);
+
     const response = await axios.post("/api/blog", formData);
-    if (response.data.success) {
-      toast.success("added");
+    // console.log("Response:", response.data); // Add this line
+    if (response) {
+      toast.success("data saved");
       setImage(false);
       setData({
         title: "",
@@ -46,12 +48,16 @@ const Page = () => {
         authorImg: "/public/profile_icon.png",
       });
     } else {
-      toast.error("Error");
+      toast.error("error");
     }
   };
   return (
     <>
-      <form action="" className="py-5 px-5 sm:pt-12 sm:pl-16">
+      <form
+        onSubmit={onSubmitHandler}
+        action=""
+        className="py-5 px-5 sm:pt-12 sm:pl-16"
+      >
         <div>
           <ToastContainer theme="dark" />
         </div>
