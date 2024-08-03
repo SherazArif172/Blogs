@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Blogitem from "../Blogitem/Blogitem";
 import { Button } from "@/components/ui/button";
-import { blog_data } from "../../../../public/assets";
+// import { blog_data } from "../../../../public/assets";
 import axios from "axios";
 
 const Bloglist = () => {

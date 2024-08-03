@@ -20,11 +20,13 @@ const Blogitem = ({ image, title, description, category, id }) => {
         </div>
         <div className="p-5">
           <Link href={`/blogs/${id}`} className="">
-            <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 hover:text-blue-800 duration-500">
+            <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2 hover:text-blue-800 duration-500 line-clamp-2">
               {title}
             </h5>
           </Link>
-          <p className="font-normal text-gray-700 mb-3">{description}</p>
+          <p className="font-normal text-gray-700 mb-3 line-clamp-3">
+            {description}
+          </p>
           <div className="flex justify-start items-center gap-8">
             <Link
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
