@@ -12,7 +12,7 @@ const Bloglist = () => {
   const [blogs, setBlogs] = useState([]);
 
   const fetchData = async () => {
-    const response = await axios.get("/api/blog");
+    const response = axios.get("/api/blog");
     setBlogs(response.data.blogs);
     console.log(response.data.blogs);
   };

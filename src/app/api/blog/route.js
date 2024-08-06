@@ -14,9 +14,16 @@ LoadData();
 
 //get request
 
-export async function GET(res) {
-  const blogs = await BlogModel.find({});
-  return NextResponse.json({ blogs });
+export async function GET(req) {
+  const url = new URL(req.url); // Create a URL instance from req.url
+  const blogId = url.searchParams.get("id");
+  if (blogId) {
+    const blog = await BlogModel.findById(blogId);
+    return NextResponse.json(blog);
+  } else {
+    const blogs = await BlogModel.find({});
+    return NextResponse.json({ blogs });
+  }
 }
 
 // post request
