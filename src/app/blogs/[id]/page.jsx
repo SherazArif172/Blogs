@@ -3,21 +3,34 @@
 import React, { useEffect, useState } from "react";
 import { assets, blog_data } from "../../../../public/assets";
 import Image from "next/image";
+import axios from "axios";
 
 const Page = ({ params }) => {
   const [data, setData] = useState(null);
 
-  const FetchBlogData = () => {
-    for (let i = 0; i < blog_data.length; i++) {
-      if (Number(params.id) === blog_data[i].id) {
-        setData(blog_data[i]);
-        console.log(blog_data[i]);
-        break;
-      }
+  const FetchBlogData = async () => {
+    // for (let i = 0; i < blog_data.length; i++) {
+    //   if (Number(params.id) === blog_data[i].id) {
+    //     setData(blog_data[i]);
+    //     console.log(blog_data[i]);
+    //     break;
+    //   }
+    // }
+    try {
+      const response = await axios.get("/api/blog", {
+        params: {
+          id: params.id,
+        },
+      });
+      setData(response.data);
+    } catch (error) {
+      console.log("id error", error);
     }
   };
 
-  useEffect(() => FetchBlogData(), []);
+  useEffect(() => {
+    FetchBlogData();
+  }, [params.id]);
   return data ? (
     <div>
       <div className="py-16 bg-slate-300 text-center">
