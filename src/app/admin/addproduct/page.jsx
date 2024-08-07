@@ -15,7 +15,7 @@ const Page = () => {
     description: "",
     category: "Startup",
     author: "Ishfaq Ahmad",
-    authorImg: "/public/profile_icon.png",
+    authorImg: "/profile_icon.png",
   });
 
   const onchangeHndler = (e) => {
@@ -45,7 +45,7 @@ const Page = () => {
         description: "",
         category: "Startup",
         author: "Ishfaq Ahmad",
-        authorImg: "/public/profile_icon.png",
+        authorImg: "../../../../public/profile_icon.png",
       });
     } else {
       toast.error("error");
@@ -58,9 +58,6 @@ const Page = () => {
         action=""
         className="py-5 px-5 sm:pt-12 sm:pl-16"
       >
-        <div>
-          <ToastContainer theme="dark" />
-        </div>
         <p className="text-xl">Upload thumbnail</p>
         <label htmlFor="image" className="">
           <Image

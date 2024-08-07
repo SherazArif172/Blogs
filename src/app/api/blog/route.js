@@ -4,6 +4,7 @@ import BlogModel from "@/lib/models/blogModel";
 
 const { NextResponse } = require("next/server");
 import { writeFile } from "fs/promises";
+const fs = require("fs");
 
 const LoadData = async () => {
   await connectDb();
@@ -51,4 +52,15 @@ export async function POST(req) {
   console.log("Data has been saved");
 
   return NextResponse.json({ Success: true, msg: "blog added" });
+}
+
+// delete logic
+
+export async function DELETE(req) {
+  const url = new URL(req.url); // Create a URL instance from req.url
+  const blogId = url.searchParams.get("id");
+  const blog = await BlogModel.findById(blogId);
+  fs.unlink(`./public/${blog.image}`, () => {});
+  await BlogModel.findByIdAndDelete(blogId);
+  return NextResponse.json({ msg: "blogdeleted" });
 }
